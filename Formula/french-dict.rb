@@ -5,13 +5,13 @@
 class FrenchDict < Formula
   desc "Fast offline French verb conjugator with reverse lookup — all moods and tenses from a single word"
   homepage "https://github.com/kal038/french-dict"
-  version "0.1.1"
+  version "0.1.2"
   license "GPL-3.0"
 
   on_macos do
     if Hardware::CPU.intel?
-      url "https://github.com/kal038/french-dict/releases/download/v0.1.1/french-dict_0.1.1_darwin_amd64.tar.gz"
-      sha256 "e23131f17ff181c632c1ab50904bfb25f043dc7883e6ed06af38510a1998e6b6"
+      url "https://github.com/kal038/french-dict/releases/download/v0.1.2/french-dict_0.1.2_darwin_amd64.tar.gz"
+      sha256 "a36ce16b02bbcc4ea6a354eb814227f518c97536de9399c1652c652e72cd8ce9"
 
       define_method(:install) do
         bin.install "conj"
@@ -19,8 +19,8 @@ class FrenchDict < Formula
       end
     end
     if Hardware::CPU.arm?
-      url "https://github.com/kal038/french-dict/releases/download/v0.1.1/french-dict_0.1.1_darwin_arm64.tar.gz"
-      sha256 "97b671d44d1f8cb8012dfc4d209fa6bf8eba38e843251413ddca16a59c4c9fd4"
+      url "https://github.com/kal038/french-dict/releases/download/v0.1.2/french-dict_0.1.2_darwin_arm64.tar.gz"
+      sha256 "5680ee155458fe797a0f6b529e2e8fff1f5792056ba254cb96c28edd6848289d"
 
       define_method(:install) do
         bin.install "conj"
@@ -31,16 +31,16 @@ class FrenchDict < Formula
 
   on_linux do
     if Hardware::CPU.intel? && Hardware::CPU.is_64_bit?
-      url "https://github.com/kal038/french-dict/releases/download/v0.1.1/french-dict_0.1.1_linux_amd64.tar.gz"
-      sha256 "fa95374467f085dd0e57c51bc315be9f2f8e92ef2cff4908a00a4c73d2b681aa"
+      url "https://github.com/kal038/french-dict/releases/download/v0.1.2/french-dict_0.1.2_linux_amd64.tar.gz"
+      sha256 "ec116f90d78525de7eacf75a50039eeafdbc879fc3576b7b2647ff417be3cd1f"
       define_method(:install) do
         bin.install "conj"
         (share/"french-dict").install "verbs.db"
       end
     end
     if Hardware::CPU.arm? && Hardware::CPU.is_64_bit?
-      url "https://github.com/kal038/french-dict/releases/download/v0.1.1/french-dict_0.1.1_linux_arm64.tar.gz"
-      sha256 "8831aac0ae48deb1c68a3e4cf3882e8dd522232ff14a7649e1e80a6a4eaef26a"
+      url "https://github.com/kal038/french-dict/releases/download/v0.1.2/french-dict_0.1.2_linux_arm64.tar.gz"
+      sha256 "7b37f8023c7afa21c0bd4f03d9c05a382fce744dda6fd9f4128182b7b76f3142"
       define_method(:install) do
         bin.install "conj"
         (share/"french-dict").install "verbs.db"
